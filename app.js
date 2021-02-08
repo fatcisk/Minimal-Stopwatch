@@ -64,6 +64,11 @@ function contactMe() {
   overlay.style.display = "block";
 }
 
+function overlayClose() {
+  contactPanel.style.display = "none";
+  overlay.style.display = "none";
+}
+
 function closeContact() {
   contactPanel.style.display = "none";
   overlay.style.display = "none";
