@@ -67,6 +67,7 @@ function contactMe() {
 function overlayClose() {
   contactPanel.style.display = "none";
   overlay.style.display = "none";
+  quoteArea.style.display = "none";
 }
 
 function closeContact() {

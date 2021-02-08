@@ -6,6 +6,8 @@
   margin: 0;
   box-sizing: border-box;
   overflow: hidden;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -109,6 +111,12 @@ body {
   cursor: pointer;
 }
 
+.new {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
 .contact-btn {
   display: flex;
   justify-content: center;
@@ -119,7 +127,6 @@ body {
   align-items: center;
   font-size: 14px;
   font-weight: 700;
-  margin: 30px;
   border: none;
   border-radius: 7px;
   box-shadow: 1px 1px 0px rgb(0 0 0 / 20%);
@@ -162,9 +169,11 @@ body {
   position: relative;
   text-align: center;
   top: 250px;
+  width: 100%;
 }
 
 .quote-text {
+  width: 100%;
   font-size: 35px;
   font-weight: 700;
   font-family: "Quicksand", sans-serif;
@@ -271,12 +280,36 @@ textarea {
     font-size: 280px;
   }
 
+  #startstop,
+  #reset,
+  .show-clock,
+  .quo-btn {
+    font-family: "Bebas Neue", cursive;
+    margin: 20px;
+    margin-top: 10px;
+    border-radius: 100px;
+    font-weight: 500;
+    font-size: 20px;
+    font-style: bold;
+    color: #3d3d3d;
+    border: none;
+    width: 150px;
+    height: 30px;
+    cursor: pointer;
+    transition: 0.2s;
+    outline: none;
+  }
+
+  .quote {
+    top: 150px;
+  }
+
   .contact-panel {
     width: 80%;
   }
 
   .buttons {
-    height: 330px;
+    height: 250px;
   }
 
   .quote-text {
@@ -291,6 +324,10 @@ textarea {
 @media all and (max-width: 770px) {
   #display {
     font-size: 260px;
+  }
+
+  .dark-mode {
+    font-size: 30px;
   }
 }
 
