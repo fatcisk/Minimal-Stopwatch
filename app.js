@@ -4,6 +4,16 @@ const display = document.getElementById("display");
 const container = document.querySelector(".container");
 const clock = document.querySelector(".clock");
 const clockbtn = document.querySelector(".show-clock");
+const contactPanel = document.querySelector(".contact-panel-holder");
+const overlay = document.querySelector(".overlay");
+const closebtn = document.querySelector(".close-btn");
+
+const quoteButton = document.querySelector(".quo-btn");
+const quoteText = document.querySelector(".quote-text");
+const textArea = document.querySelector(".text-area");
+const saveButton = document.querySelector(".save-quote");
+const quoteArea = document.querySelector(".quote-area");
+const warning = document.querySelector(".warning");
 
 buttonContainer.addEventListener("mouseover", function () {
   buttonContainer.style.opacity = "1";
@@ -12,7 +22,28 @@ buttonContainer.addEventListener("mouseover", function () {
 buttonContainer.addEventListener("mouseout", function () {
   buttonContainer.style.opacity = "0";
 });
+//quote
 
+quoteButton.addEventListener("click", function () {
+  overlay.style.display = "block";
+  quoteArea.style.display = "block";
+});
+
+quoteText.innerHTML = localStorage.getItem("quoteText");
+
+saveButton.addEventListener("click", function () {
+  localStorage.setItem("quoteText", textArea.value);
+  quoteText.innerHTML = textArea.value;
+  quoteArea.style.display = "none";
+  overlay.style.display = "none";
+  if (textArea.value === "") {
+    quoteText.style.display = "none";
+  } else {
+    quoteText.style.display = "block";
+  }
+});
+
+//quote
 function startTime() {
   var today = new Date();
   var h = today.getHours();
@@ -26,6 +57,16 @@ function checkTime(i) {
     i = "0" + i;
   } // add zero in front of numbers < 10
   return i;
+}
+
+function contactMe() {
+  contactPanel.style.display = "flex";
+  overlay.style.display = "block";
+}
+
+function closeContact() {
+  contactPanel.style.display = "none";
+  overlay.style.display = "none";
 }
 
 clockbtncounter = 1;
@@ -159,6 +200,7 @@ function startStop() {
 }
 
 function reset() {
+  localStorage.setItem("warning", 0);
   window.clearInterval(intreval);
   seconds = 0;
   minutes = 0;
@@ -171,4 +213,14 @@ function reset() {
   localStorage.setItem("hours", 0);
   localStorage.setItem("minutes", 0);
   status = "stopped";
+
+  if (localStorage.getItem("warning") === "0") {
+    console.log("hi");
+    warning.style.display = "none";
+  }
+}
+
+if (localStorage.getItem("warning") === "0") {
+  console.log("hi");
+  warning.style.display = "none";
 }

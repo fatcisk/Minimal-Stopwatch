@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stopwatch</title>
+    <title>Modern Stopwatch</title>
     <link rel="stylesheet" href="style.css" />
     <script
       src="https://kit.fontawesome.com/e9dae8f569.js"
@@ -13,16 +13,73 @@
   </head>
   <body onload="startTime()">
     <div class="container">
+      <!-- QUOTE PADE -->
+      <div class="quote-container">
+        <div class="quote-area" style="display: none">
+          <h1 class="quote-header">
+            Type a quote that inspires you. (leave blank if you don't want
+            quote.)
+          </h1>
+          <textarea
+            maxlength="350"
+            class="text-area"
+            spellcheck="false"
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+          ></textarea>
+          <button class="save-quote">SAVE</button>
+        </div>
+      </div>
+      <!-- QUOTE PADE -->
+      <div class="overlay" style="display: none"></div>
+      <div class="contact-panel-holder" style="display: none">
+        <div class="contact-panel">
+          <h1 onclick="closeContact()" class="close-btn">&times;</h1>
+          <h3 class="contact-text">
+            You can submit any ideas, suggestions or thoughts.
+          </h3>
+          <h4 class="contact-email">Email : fatihcandev@gmail.com</h4>
+        </div>
+      </div>
       <div class="buttons">
+        <div class="additional">
+          <div class="kofi-btn">
+            <script
+              type="text/javascript"
+              src="https://ko-fi.com/widgets/widget_2.js"
+            ></script>
+            <script type="text/javascript">
+              kofiwidget2.init("Get Me a Coffee", "#ff0000", "K3K33KY9N");
+              kofiwidget2.draw();
+            </script>
+          </div>
+          <div>
+            <button onclick="contactMe()" class="contact-btn">
+              Contact Me
+            </button>
+          </div>
+        </div>
         <button id="startstop" class="cbtn" onclick="startStop()">START</button>
         <button id="reset" class="cbtn" onclick="reset()">RESET</button>
-        <button class="show-clock">HIDE CLOCK</button><br />
+        <button class="show-clock">HIDE CLOCK</button>
+        <button class="quo-btn">add quote</button><br />
         <i class="dark-mode far fa-lightbulb" onclick="deneme()"></i>
       </div>
       <div class="time">
+        <h1 class="warning">Click Reset To Start Using The Website.</h1>
         <div class="deneme" id="display">00.00.00</div>
         <div id="clock" class="clock">00:00</div>
       </div>
+      <!-- QUOTE AREA -->
+      <div class="quote">
+        <q class="quote-text">
+          Concentrate all your thoughts upon the work in hand. The sun's rays do
+          not burn until brought to a focus.
+        </q>
+      </div>
+      <!-- QUOTE AREA -->
     </div>
     <script src="./app.js"></script>
   </body>
