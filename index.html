@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/e9dae8f569.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body onload="startTime()">
+    <div class="container">
+      <div class="buttons">
+        <button id="startstop" class="cbtn" onclick="startStop()">START</button>
+        <button id="reset" class="cbtn" onclick="reset()">RESET</button>
+        <button class="show-clock">HIDE CLOCK</button><br />
+        <i class="dark-mode far fa-lightbulb" onclick="deneme()"></i>
+      </div>
+      <div class="time">
+        <div class="deneme" id="display">00.00.00</div>
+        <div id="clock" class="clock">00:00</div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>

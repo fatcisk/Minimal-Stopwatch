@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Bebas Neue", cursive;
+}
+
+body {
+  height: 100vh;
+  text-align: center;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+}
+
+#display {
+  width: 100%;
+  height: 300px;
+  font-size: 300px;
+  font-weight: 500;
+  margin: 0 auto;
+  color: #3d3d3d;
+}
+
+.clock {
+  width: 100%;
+  font-size: 120px;
+  font-weight: 500;
+  margin: 30px auto;
+  color: #3d3d3d;
+}
+
+#startstop,
+#reset,
+.show-clock {
+  margin: 20px;
+  margin-top: 100px;
+  border-radius: 100px;
+  font-weight: 500;
+  font-size: 30px;
+  font-style: bold;
+  color: #3d3d3d;
+  border: none;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#startstop:hover,
+#reset:hover,
+.show-clock:hover {
+  transform: scale(1.1);
+}
+
+#startstop:active,
+#reset:active,
+.show-clock:active {
+  transform: scale(1.2);
+}
+
+#startstop:focus,
+#reset:focus,
+.show-clock:focus {
+  outline: none;
+}
+
+.buttons {
+  text-align: center;
+  height: 250px;
+  transition: 0.3s;
+}
+
+.dark-mode {
+  font-size: 50px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.dark-mode:hover {
+  transform: scale(1.1);
+}
+
+.dark-mode:active {
+  transform: scale(1.2);
+}
