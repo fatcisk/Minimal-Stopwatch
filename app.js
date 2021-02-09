@@ -7,7 +7,11 @@ const clockbtn = document.querySelector(".show-clock");
 const contactPanel = document.querySelector(".contact-panel-holder");
 const overlay = document.querySelector(".overlay");
 const closebtn = document.querySelector(".close-btn");
-
+const contactbutton = document.querySelector(".contact-btn");
+const startstopbutton = document.getElementById("startstop");
+const kofibutton = document.querySelector(".kofi-btn");
+const resetbutton = document.getElementById("reset");
+const quotebutton = document.querySelector(".quo-btn");
 const quoteButton = document.querySelector(".quo-btn");
 const quoteText = document.querySelector(".quote-text");
 const textArea = document.querySelector(".text-area");
@@ -17,11 +21,28 @@ const warning = document.querySelector(".warning");
 
 buttonContainer.addEventListener("mouseover", function () {
   buttonContainer.style.opacity = "1";
+  setTimeout(function () {
+    darkmodeBtn.style.pointerEvents = "auto";
+    clockbtn.style.pointerEvents = "auto";
+    contactbutton.style.pointerEvents = "auto";
+    startstopbutton.style.pointerEvents = "auto";
+    resetbutton.style.pointerEvents = "auto";
+    kofibutton.style.pointerEvents = "auto";
+    quoteButton.style.pointerEvents = "auto";
+  }, 1000);
 });
 
-buttonContainer.addEventListener("mouseout", function () {
+buttonContainer.addEventListener("mouseleave", function () {
   buttonContainer.style.opacity = "0";
+  darkmodeBtn.style.pointerEvents = "none";
+  clockbtn.style.pointerEvents = "none";
+  contactbutton.style.pointerEvents = "none";
+  startstopbutton.style.pointerEvents = "none";
+  resetbutton.style.pointerEvents = "none";
+  kofibutton.style.pointerEvents = "none";
+  quoteButton.style.pointerEvents = "none";
 });
+
 //quote
 
 quoteButton.addEventListener("click", function () {
